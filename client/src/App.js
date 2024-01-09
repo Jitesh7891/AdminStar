@@ -38,7 +38,6 @@ function App() {
       <Routes>
 
       <Route element={<Layout />}>
-
         <Route exact path="/" element={< Navigate to="/dashboard" replace />} > </Route>
         <Route exact path="/dashboard" element={<MyDashboard/>} > </Route>
         <Route exact path="/products" element={<Products/>} > </Route>

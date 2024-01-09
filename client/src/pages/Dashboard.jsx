@@ -22,6 +22,8 @@ import { useGetDashboardQuery } from "state/api";
 import StatBox from "components/Statbox";
 
 const Dashboard = () => {
+  
+  console.log(process.env.REACT_APP_BASE_URL)
   const theme = useTheme();
   const isNonMediumScreens = useMediaQuery("(min-width: 1200px)");
   const { data, isLoading } = useGetDashboardQuery();
