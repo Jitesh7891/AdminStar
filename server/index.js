@@ -13,14 +13,14 @@ const salesRoutes = require("./routes/sales.js");
 
 
 // data imports
-const modelsPath = "./models/";
+// const modelsPath = "./models/";
 
-const User =require( modelsPath + "User.js");
-const Product = require(modelsPath + "Product.js");
-const ProductStat = require(modelsPath + "ProductStat.js");
-const Transaction = require(modelsPath + "Transaction.js");
-const OverallStat = require(modelsPath + "OverallStat.js");
-const AffiliateStat = require(modelsPath + "AffiliateStat.js");
+// const User =require( modelsPath + "User.js");
+// const Product = require(modelsPath + "Product.js");
+// const ProductStat = require(modelsPath + "ProductStat.js");
+// const Transaction = require(modelsPath + "Transaction.js");
+// const OverallStat = require(modelsPath + "OverallStat.js");
+// const AffiliateStat = require(modelsPath + "AffiliateStat.js");
 
 const {
   dataUser,
@@ -57,6 +57,10 @@ const connect=async()=>{
 }
 
 connect();
+
+app.get('/*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  });  
 
 //App Setup
 const port=process.env.PORT
